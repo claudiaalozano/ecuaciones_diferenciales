@@ -1,5 +1,5 @@
-import ecuacion1
+from lanzador import iniciar
 
-
-def iniciar():
-    ecuacion1.resolver()
+if __name__ == '__main__':
+    iniciar()
+    
