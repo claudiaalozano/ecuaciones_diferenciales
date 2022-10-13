@@ -1,4 +1,6 @@
+from torch import eq
 import sympy as sym
+import matplotlib
 sym.init_printing(use_latex= True) # Para imprimir en formato LaTeX en la consola 
 
 def resolver():
@@ -9,7 +11,6 @@ def resolver():
      a = sym.dsolve(eq) # Resolvemos la ecuación diferencial
      print("La solución a la ecuación 2ty'-y=3t^2 es:")
      sym.pprint(a) # Imprimimos la solución
-
 resolver()
 
 
