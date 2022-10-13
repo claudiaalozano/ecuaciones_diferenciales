@@ -11,7 +11,7 @@ def resolver():
     print("La solución a la ecuación y'- (y/(t-2))= 2(t-2)^2 es:")
     sym.pprint(a) # Imprimimos la solución
 
-
+resolver()
 #def lin():
    # print("\n")
 
