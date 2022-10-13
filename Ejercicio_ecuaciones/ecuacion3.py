@@ -3,7 +3,6 @@ sym.init_printing(use_latex= True) # Para imprimir en formato LaTeX en la consol
 
 def resolver():
     y= sym.symbols("f", cls=sym.Function) # Definimos la función f  
-    x= sym.symbols("x", real = True) # Definimos la variable x
     t= sym.symbols("t", real = True) # Definimos la variable t
 
     eq = sym.Eq(y(t).diff(t)-y(t)/(t-2), 2*(t-2)**2) # Definimos la ecuación diferencial
