@@ -10,7 +10,6 @@ def resolver():
     b = sym.dsolve(eq, ics={y(3): 1}) #condición inicizl
     print("La solución a la ecuación y'= x^2*y-y/(1+y) es:")
     sym.pprint(a) # Imprimimos la solución
-    sym.pprint(b)
-resolver()
+
 
 
