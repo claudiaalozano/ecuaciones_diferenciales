@@ -1,6 +1,4 @@
 import sympy
-import sys
-import pprint
 
 class Ec_Dif_1():
     def __init__(self) -> None:
