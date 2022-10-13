@@ -1,13 +1,15 @@
 import sympy as sym
 sym.init_printing(use_latex= True)
-y = sym.symbols("f", cls=sym.Function)
-x = sym.symbols("x", real = True)
 
-eq = sym.Eq(y(x).diff(x)*sym.sin(x), y(x) * sym.log(y(x)))
-a = sym.dsolve(eq, ics ={y(sym.pi/2): sym.exp(1), sym.diff(y(x), x).subs(x, sym.pi/2): sym.exp(1)})
-print("La solución a la ecuación y`sen(x) = y ln(y) es:")
-sym.pprint(a)
+def resolver():
+    y = sym.symbols("f", cls=sym.Function)
+    x = sym.symbols("x", real = True)
 
+    eq = sym.Eq(y(x).diff(x)*sym.sin(x), y(x) * sym.log(y(x)))
+    a = sym.dsolve(eq, ics ={y(sym.pi/2): sym.exp(1), sym.diff(y(x), x).subs(x, sym.pi/2): sym.exp(1)})
+    print("La solución a la ecuación y`sen(x) = y ln(y) es:")
+    sym.pprint(a)
+resolver()
 
 #def lin():
    # print("\n")
