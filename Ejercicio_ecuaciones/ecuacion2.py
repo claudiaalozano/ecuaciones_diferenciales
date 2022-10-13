@@ -3,7 +3,9 @@ sym.init_printing(use_latex= True)
 y = sym.symbols("f", cls=sym.Function)
 x = sym.symbols("x")
 
-
+eq = sym.Eq(y(x).diff(x)*sym.sin(x), y(x) * sym.log(y(x)))
+a = sym.dsolve(eq, ics ={y(sym.pi/2): sym.exp(1), sym.diff(y(x), x).subs(x, sym.pi/2): sym.exp(1)})
+print(a)
 #def lin():
    # print("\n")
 
