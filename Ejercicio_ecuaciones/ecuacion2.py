@@ -7,8 +7,11 @@ def resolver():
 
     eq = sym.Eq(y(x).diff(x)*sym.sin(x), y(x) * sym.log(y(x)))
     a = sym.dsolve(eq, ics ={y(sym.pi/2): sym.exp(1), sym.diff(y(x), x).subs(x, sym.pi/2): sym.exp(1)})
+    b = sym.dsolve(eq, ics={y(sym.pi/2): sym.exp(1)}) #condición inicial
     print("La solución a la ecuación y`sen(x) = y ln(y) es:")
     sym.pprint(a)
+    sym.pprint(b)
+     
 resolver()
 
 #def lin():

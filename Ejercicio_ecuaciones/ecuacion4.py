@@ -1,4 +1,8 @@
+
 import sympy as sym
+import matplotlib.pyplot as plt
+import numpy as np
+
 sym.init_printing(use_latex= True) # Para imprimir en formato LaTeX en la consola 
 
 def resolver():
@@ -9,6 +13,49 @@ def resolver():
      a = sym.dsolve(eq) # Resolvemos la ecuación diferencial
      print("La solución a la ecuación 2ty'-y=3t^2 es:")
      sym.pprint(a) # Imprimimos la solución
+
+def ecuacion(t,y):
+  dydt = (3*t**2 + y)/2*t
+  return dydt
+def real(t):
+  return  ((t)**1/2) + t
+
+
+t_0 = 1
+y_0 = 3
+
+t_positivo = np.linspace(t_0, 40, 100)
+t_negativo = np.linspace(-40, t_0, 100)
+h= t_positivo[2]- t_positivo[1]
+
+f = [[t_0,y_0]]
+f_real = [[t_0, real(t_0)]]
+
+for i,j in enumerate(t_positivo[:1]):
+  dydt = ecuacion(f[i][0],f[i][1])
+  euler = f[i][1] + dydt*h
+  f.append([j, euler])
+  f_real.append([j, real(j)])
+
+
+for i,j in enumerate(list(reversed(t_negativo))[:1]):
+  dydt = ecuacion(f[0][0],f[0][1]
+  )
+  euler = f[0][1] + dydt*h
+  f.insert(0,[j, euler])
+  f_real.insert(0, [j, real(j)])
+
+t =[i[0] for i in f]
+y = [i[1] for i in f]
+
+t_real = [i[0] for i in f_real]
+y_real = [i[1] for i in f_real]
+
+plt.figure(figsize=(10,10))
+plt.scatter(t, y)
+plt.scatter(t_real, y_real)
+plt.legend(["Aproximación","Real"])
+plt.show()
 
 resolver()
 

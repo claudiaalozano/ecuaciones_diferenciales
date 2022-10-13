@@ -7,8 +7,10 @@ def resolver():
     
     eq = sym.Eq(y(x).diff(x), x**2*y(x)-y(x)/(1+y(x))) # Definimos la ecuación diferencial
     a = sym.dsolve(eq, ics ={y(3): -1, sym.diff(y(x), x).subs(x, 0): 0}) # Resolvemos la ecuación diferencial
+    b = sym.dsolve(eq, ics={y(3): 1}) #condición inicizl
     print("La solución a la ecuación y'= x^2*y-y/(1+y) es:")
     sym.pprint(a) # Imprimimos la solución
+    sym.pprint(b)
 resolver()
 
 
