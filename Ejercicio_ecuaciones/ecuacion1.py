@@ -10,5 +10,8 @@ def resolver():
     print("La solución a la ecuación y'= x^2*y-y/(1+y) es:")
     sym.pprint(a) # Imprimimos la solución
 
+if __name__ == "__main__":
+    resolver()
+    
 
 
