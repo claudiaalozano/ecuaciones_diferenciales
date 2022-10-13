@@ -19,7 +19,7 @@ def ecuacion(t,y):
   dydt = (3*t**2 + y)/2*t
   return dydt
 def real(t):
-  return  ((t)**1/2) + t
+  return t**2 + ((t)**1/2) 
 
 
 t_0 = 1
@@ -27,22 +27,22 @@ y_0 = 3
 
 t_positivo = np.linspace(t_0, 20, 100)
 t_negativo = np.linspace(0, t_0, 100)
-h= t_positivo[2]- t_positivo[1]
+h= t_positivo[2] - t_positivo[1]
 
 f = [[t_0,y_0]]
 f_real = [[t_0, real(t_0)]]
 
-for i,j in enumerate(t_positivo[:1]):
+for i,j in enumerate(t_positivo[1:]):
   dydt = ecuacion(f[i][0],f[i][1])
   euler = f[i][1] + dydt*h
   f.append([j, euler])
   f_real.append([j, real(j)])
 
 
-for i,j in enumerate(list(reversed(t_negativo))[:1]):
+for i,j in enumerate(list(reversed(t_negativo))[1:]):
   dydt = ecuacion(f[0][0],f[0][1]
   )
-  euler = f[0][1] + dydt*h
+  euler = f[0][1] - dydt*h
   f.insert(0,[j, euler])
   f_real.insert(0, [j, real(j)])
 
