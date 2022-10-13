@@ -6,7 +6,7 @@ Este es el link del [repositorio](https://github.com/claudiaalozano/ecuaciones_d
 
 ***
 <h2>¿De qué trata esta tarea?</h2>
-En esta tarea hemos hecho un programa para resolver las ecuaciones diferenciales del pasado examen de la asignatura de Ecuaciones Diferenciales.
+En esta tarea hemos hecho un programa para resolver las ecuaciones diferenciales del pasado examen de la asignatura de Ecuaciones Diferenciales y Ecuaciones en Diferencias.
 
 ***
 <h2>Integrantes:</h2>
