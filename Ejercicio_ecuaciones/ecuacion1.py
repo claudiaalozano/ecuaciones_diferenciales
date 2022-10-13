@@ -9,6 +9,6 @@ def resolver():
     a = sym.dsolve(eq, ics ={y(3): -1, sym.diff(y(x), x).subs(x, 0): 0}) # Resolvemos la ecuación diferencial
     print("La solución a la ecuación y'= x^2*y-y/(1+y) es:")
     sym.pprint(a) # Imprimimos la solución
-
+resolver()
 
 
