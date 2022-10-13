@@ -12,4 +12,8 @@ def resolver():
     sym.pprint(a) # Imprimimos la solución
 
 
+resolver()
+
+
+
 
