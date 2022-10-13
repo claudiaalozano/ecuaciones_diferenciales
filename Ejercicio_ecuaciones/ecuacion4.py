@@ -1,7 +1,7 @@
 import sympy as sym
- sym.init_printing(use_latex= True) # Para imprimir en formato LaTeX en la consola 
+sym.init_printing(use_latex= True) # Para imprimir en formato LaTeX en la consola 
 
- def resolver():
+def resolver():
      y= sym.symbols("f", cls=sym.Function) # Definimos la función f  
      x= sym.symbols("x", real = True) # Definimos la variable x
      t= sym.symbols("t", real = True)
@@ -10,6 +10,8 @@ import sympy as sym
      a = sym.dsolve(eq) # Resolvemos la ecuación diferencial
      print("La solución a la ecuación 2ty'-y=3t^2 es:")
      sym.pprint(a) # Imprimimos la solución
+
+resolver()
 
 
  #def lin():
