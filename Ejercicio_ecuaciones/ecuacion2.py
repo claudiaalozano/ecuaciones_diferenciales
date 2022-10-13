@@ -1,7 +1,7 @@
 import sympy as sym
 sym.init_printing(use_latex= True)
 
-def resolver():
+def resolver_2():
     y = sym.symbols("f", cls=sym.Function)
     x = sym.symbols("x", real = True)
 
@@ -11,8 +11,8 @@ def resolver():
     print("La solución a la ecuación y`sen(x) = y ln(y) es:")
     sym.pprint(a)
     sym.pprint(b)
-     
-resolver()
+
+resolver_2()
 
 #def lin():
    # print("\n")

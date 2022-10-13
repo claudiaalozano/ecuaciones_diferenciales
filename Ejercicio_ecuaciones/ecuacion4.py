@@ -5,7 +5,7 @@ import numpy as np
 
 sym.init_printing(use_latex= True) # Para imprimir en formato LaTeX en la consola 
 
-def resolver():
+def resolver_4():
      y= sym.symbols("f", cls=sym.Function) # Definimos la función f  
      t= sym.symbols("t", real = True)
 
@@ -58,9 +58,7 @@ plt.scatter(t_real, y_real)
 plt.legend(["Aproximación","Real"])
 plt.show()
 
-
-resolver()
-
+resolver_4()
 
  #def lin():
     # print("\n")

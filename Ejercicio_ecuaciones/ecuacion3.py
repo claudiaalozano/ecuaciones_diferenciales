@@ -1,7 +1,7 @@
 import sympy as sym
 sym.init_printing(use_latex= True) # Para imprimir en formato LaTeX en la consola 
 
-def resolver():
+def resolver_3():
     y= sym.symbols("f", cls=sym.Function) # Definimos la función f  
     t= sym.symbols("t", real = True) # Definimos la variable t
 
@@ -10,7 +10,8 @@ def resolver():
     print("La solución a la ecuación y'- (y/(t-2))= 2(t-2)^2 es:")
     sym.pprint(a) # Imprimimos la solución
 
-resolver()
+resolver_3()
+
 #def lin():
    # print("\n")
 

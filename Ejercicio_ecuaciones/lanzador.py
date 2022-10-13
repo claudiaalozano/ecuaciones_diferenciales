@@ -6,10 +6,10 @@ import ecuacion4
 
 
 def iniciar():
-    ecuacion1.resolver()
-    ecuacion2.resolver()
-    ecuacion3.resolver()
-    ecuacion4.resolver()
+    ecuacion1.resolver_1()
+    ecuacion2.resolver_2()
+    ecuacion3.resolver_3()
+    ecuacion4.resolver_4()
 
     
 
