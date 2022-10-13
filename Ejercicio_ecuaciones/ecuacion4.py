@@ -3,10 +3,9 @@ sym.init_printing(use_latex= True) # Para imprimir en formato LaTeX en la consol
 
 def resolver():
      y= sym.symbols("f", cls=sym.Function) # Definimos la función f  
-     x= sym.symbols("x", real = True) # Definimos la variable x
      t= sym.symbols("t", real = True)
 
-     eq = sym.Eq(2*t*y(x).diff(x)-y(x), 3*t**2) # Definimos la ecuación diferencial
+     eq = sym.Eq(2*t*y(t).diff(t)-y(t), 3*t**2) # Definimos la ecuación diferencial
      a = sym.dsolve(eq) # Resolvemos la ecuación diferencial
      print("La solución a la ecuación 2ty'-y=3t^2 es:")
      sym.pprint(a) # Imprimimos la solución
