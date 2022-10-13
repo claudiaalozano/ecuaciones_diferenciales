@@ -1,8 +1,14 @@
+<<<<<<< HEAD
 
 import sympy as sym
 import matplotlib.pyplot as plt
 import numpy as np
 
+=======
+from torch import eq
+import sympy as sym
+import matplotlib
+>>>>>>> bfc9c7e7b70abd3e8166356aec13df0587a7b660
 sym.init_printing(use_latex= True) # Para imprimir en formato LaTeX en la consola 
 
 def resolver():
@@ -13,6 +19,7 @@ def resolver():
      a = sym.dsolve(eq) # Resolvemos la ecuación diferencial
      print("La solución a la ecuación 2ty'-y=3t^2 es:")
      sym.pprint(a) # Imprimimos la solución
+<<<<<<< HEAD
 
 def ecuacion(t,y):
   dydt = (3*t**2 + y)/2*t
@@ -57,6 +64,8 @@ plt.scatter(t_real, y_real)
 plt.legend(["Aproximación","Real"])
 plt.show()
 
+=======
+>>>>>>> bfc9c7e7b70abd3e8166356aec13df0587a7b660
 resolver()
 
 
